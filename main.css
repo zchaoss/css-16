@@ -1,0 +1,43 @@
+.demo1 {
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+.demo1:hover.first {
+  transform: scale(0.5);
+}
+.demo1 div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  position: absolute;
+}
+.demo1 :nth-child(1),
+.demo1 :nth-child(2) {
+  border-radius: 50%;
+}
+.demo1 :nth-child(3) {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.demo1 :nth-child(2) {
+  right: 0;
+}
+.demo1 :nth-child(1) {
+  transform: rotate(-45deg) translateY(20px);
+}
+.demo1 :nth-child(2) {
+  transform: rotate(45deg) translateY(20px);
+}
+.demo1.second {
+  animation: heart 1s alternate infinite;
+}
+@keyframes heart {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(0.5);
+  }
+}
